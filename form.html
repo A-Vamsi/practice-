@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2000 vs 2026</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+}
+
+.photoshoot {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 4 / 5;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #d5d0c8;
+    padding: 25px 12px;
+}
+
+/* Soft yellow light */
+.photoshoot::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 220, 140, 0.18);
+    pointer-events: none;
+}
+
+.person {
+    width: 43%;
+    height: 85%;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.year {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.person img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    border-radius: 3px;
+}
+
+.right img {
+    filter: grayscale(100%) sepia(15%);
+}
+
+.table {
+    position: absolute;
+    z-index: 3;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22%;
+    height: 12%;
+    background: #71675b;
+    border-radius: 3px;
+}
+
+.table::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -5%;
+    width: 110%;
+    height: 12px;
+    background: #a18e78;
+}
+
+.caption {
+    position: absolute;
+    bottom: 2%;
+    z-index: 4;
+    color: #333;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="photoshoot">
+
+    <div class="person left">
+        <div class="year">2000</div>
+        <img src="childhood.jpg" alt="Childhood photo">
+    </div>
+
+    <div class="person right">
+        <div class="year">2026</div>
+        <img src="present.jpg" alt="Present photo">
+    </div>
+
+    <div class="table"></div>
+
+    <div class="caption">
+        A JOURNEY THROUGH TIME
+    </div>
+
+</div>
+
+</body>
+</html>
